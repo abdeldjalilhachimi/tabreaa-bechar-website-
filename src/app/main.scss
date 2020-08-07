@@ -1,0 +1,18 @@
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+}
+
+$secondary: #ea476a;
+
+@import "../components/layout/header.scss";
+@import "../components/auth/signin.scss";
+@import "../components/donors/addcard.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

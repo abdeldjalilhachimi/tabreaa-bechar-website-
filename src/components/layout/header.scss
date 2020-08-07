@@ -1,0 +1,23 @@
+$primaryColor: #ea476a;
+$secondaryColor: #f59caf;
+
+nav {
+  background-color: $primaryColor;
+  
+  .navbar-brand {
+    color: white !important;
+  }
+  .nav-link {
+    color: white !important;
+  }
+}
+
+.navbar-toggler {
+  color: white !important;
+  border-color: white !important;
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
