@@ -4,9 +4,10 @@
   "description": "a simple website for helping our community specially whose looking for donation for their patinet, we hope this website help them as much as possible",
   "main": "bundler.js",
   "scripts": {
-    "serve": "live-server dist/",
+    "serve": "live-server public/",
     "start": "npm run build",
-    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot",
+    "dev-server": "webpack-dev-server",
+    "build:dev": "webpack",
     "build:prod": "webpack -p --env production  "
   },
   "keywords": [],
@@ -14,12 +15,15 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "express": "^4.17.1",
     "firebase": "^7.15.5",
     "framer-motion": "^2.3.0",
     "history": "^5.0.0",
     "jquery": "^3.5.1",
     "jss-rtl": "^0.3.0",
     "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "popper.js": "^1.16.1",
     "react-facebook-login": "^4.1.1",
     "react-file-reader": "^1.1.4",

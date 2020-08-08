@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { startLogin } from "../../store/actions/authActions";
+import img from "../../app/img/loginpage.jpg";
 const SignIn = ({ startLogin }) => {
   return (
     <div className="container-fluid">
@@ -33,11 +34,7 @@ const SignIn = ({ startLogin }) => {
           </div>
         </div>
         <div className="col-sm-6 px-0 d-none d-sm-block">
-          <img
-            src="../../app/img/loginpage.jpg"
-            alt="login image"
-            className="login-img"
-          />
+          <img src={img} alt="login image" className="login-img" />
         </div>
       </div>
     </div>

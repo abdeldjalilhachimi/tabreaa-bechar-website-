@@ -1,20 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  Router,
+  BrowserRouter,
+  Route,
+  Switch,
+  HashRouter,
+  browserHistory,
+} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Donors from "../components/donors/Donors";
 import SignIn from "../components/auth/SignIn";
 import NotFound from "../components/pages/NotFound";
 import AddDonor from "../components/donors/AddDonor";
-//import EditDonor from "../components/donors/EditDonor";
 import PrivacyPolicy from "../components/pages/PrivacyPolicy";
 import LoadingPage from "../components/pages/LoadingPage";
-
 import { Provider } from "react-redux";
 import { startSetDonor } from "../store/actions/donorActions";
 import { login, logout } from "../store/actions/authActions";
-import { history } from "../components/history";
+import history from "history/browser";
 import { firebase } from "../service/firebase";
 import "../service/firebase";
 import store from "../store/store";
@@ -24,7 +29,7 @@ import "./main.scss";
 const App = () => {
   return (
     <Provider store={store}>
-      <Router history={history}>
+      <BrowserRouter history={history}>
         <div className="App">
           <Switch>
             <Route exact={true} path="/" component={SignIn} />
@@ -35,7 +40,7 @@ const App = () => {
             <Route component={NotFound} />
           </Switch>
         </div>
-      </Router>
+      </BrowserRouter>
     </Provider>
   );
 };

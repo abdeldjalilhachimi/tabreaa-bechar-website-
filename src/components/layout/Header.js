@@ -25,21 +25,17 @@ const Header = ({ startLogout }) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto " navbar>
             <NavItem>
-              <NavLink to="/home" className="nav-link" activeStyle={{}}>
+              <Link to="/home" className="nav-link">
                 الرئسية
-              </NavLink>
+              </Link>
             </NavItem>
             <NavItem>
-              <NavLink
-                to="/donor/profile"
-                className="nav-link"
-                activeStyle={{}}
-              >
+              <NavLink to="/donor/profile" className="nav-link">
                 صفحة شخصبة
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/privacy" className="nav-link" activeStyle={{}}>
+              <NavLink to="/privacy" className="nav-link">
                 شروط الإستخدام
               </NavLink>
             </NavItem>
