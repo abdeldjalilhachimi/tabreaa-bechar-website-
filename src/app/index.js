@@ -1,13 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {
-  Router,
-  BrowserRouter,
-  Route,
-  Switch,
-  HashRouter,
-  browserHistory,
-} from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Donors from "../components/donors/Donors";
@@ -24,6 +17,7 @@ import { firebase } from "../service/firebase";
 import "../service/firebase";
 import store from "../store/store";
 import PrivateRoute from "../router/PrivateRoute";
+
 import "./main.scss";
 
 const App = () => {
