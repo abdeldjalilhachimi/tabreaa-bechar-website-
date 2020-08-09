@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
 import Donors from "../components/donors/Donors";
 import SignIn from "../components/auth/SignIn";
 import NotFound from "../components/pages/NotFound";
@@ -17,7 +15,8 @@ import { firebase } from "../service/firebase";
 import "../service/firebase";
 import store from "../store/store";
 import PrivateRoute from "../router/PrivateRoute";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./main.scss";
 
 const App = () => {
@@ -29,7 +28,6 @@ const App = () => {
             <Route exact={true} path="/" component={SignIn} />
             <PrivateRoute path="/home" component={Donors} />
             <PrivateRoute path="/donor/profile" component={AddDonor} />
-            {/*  <PrivateRoute path="/donor/edit" component={EditDonor} /> */}
             <PrivateRoute path="/privacy" component={PrivacyPolicy} />
             <Route component={NotFound} />
           </Switch>

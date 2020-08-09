@@ -8,11 +8,16 @@
 
 body {
   font-family: "Heebo", sans-serif;
+  background: #f5efef !important;
 }
 
-//$secondary: #ea476a;
+$secondary: #ea476a;
+$ScondaryColor: #3c2c3e;
 
 @import "../components/layout/header.scss";
 @import "../components/auth/signin.scss";
 @import "../components/donors/addcard.scss";
+@import "../components/donors/donor.scss";
+@import "../components/pages/privacy.scss";
+@import "../components/pages/loeading.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

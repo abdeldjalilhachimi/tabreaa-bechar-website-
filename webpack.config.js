@@ -38,7 +38,7 @@ module.exports = (env) => {
 
         {
           test: /\.(png|svg|jpg|gif)$/,
-          use: ["file-loader", "source-map-loader"],
+          use: ["url-loader?limit=8192", "file-loader", "source-map-loader"],
         },
       ],
     },

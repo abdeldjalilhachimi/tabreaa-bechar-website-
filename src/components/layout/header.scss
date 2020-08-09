@@ -3,12 +3,43 @@ $secondaryColor: #f59caf;
 
 nav {
   background-color: $primaryColor;
-  
+  box-sizing: border-box;
+
   .navbar-brand {
     color: white !important;
   }
+
   .nav-link {
     color: white !important;
+
+    &:after {
+      content: "";
+      display: block;
+      background-color: #FFF;
+      width: 0;
+      height: 2px;
+      transition: width .5s ease-in-out;
+    }
+
+    &:hover:after {
+
+      width: 25px;
+
+    }
+
+
+  }
+}
+
+@media (max-width: 575px) {
+  .nav-link {
+    float: right;
+  }
+}
+
+@media (max-width: 991px) {
+  .nav-link {
+    float: right;
   }
 }
 

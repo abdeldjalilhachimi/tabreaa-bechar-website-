@@ -1,23 +1,15 @@
 import React from "react";
-import { motion } from "framer-motion";
 
-const LoadingPage = () => {
+const LoadingPage = () => {  
   return (
-    <div className="container-fuild vh-100 bg-gray ">
+    <div className="container-fuild vh-100  bg-leading ">
       <div className="row vh-100  align-items-center">
         <div className="col-sm-12 ">
-          <p className="text-center h4">
-            <motion.i
-              animate={{
-                x: -32,
-                y: 21,
-                scale: 0.5,
-                color: "#ea476a",
-              }}
-              className="fa fa-heart fa-5x"
-            ></motion.i>{" "}
-            ...إنتطر لحظة من فضلك
-          </p>
+          <div className="spinner mb-2">
+            <div className="bounce1"></div>
+            <div className="bounce2"></div>
+            <div className="bounce3"></div>
+          </div>
         </div>
       </div>
     </div>

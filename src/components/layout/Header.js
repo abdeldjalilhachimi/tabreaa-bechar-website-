@@ -31,7 +31,7 @@ const Header = ({ startLogout }) => {
             </NavItem>
             <NavItem>
               <NavLink to="/donor/profile" className="nav-link">
-                صفحة شخصبة
+                الصفحة الشخصبة
               </NavLink>
             </NavItem>
             <NavItem>

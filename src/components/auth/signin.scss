@@ -16,7 +16,61 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     padding: 68px 100px;
-    background-color: #CCC;
+    background: #f5efef !important;
+
+    .login-wrapper {
+        width: 300px;
+        max-width: 100%;
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #b0adad;
+        }
+
+        .login-title {
+            color: #3c2c3e,
+        }
+
+        .login-wrapper .form-control {
+            border: none;
+            border-bottom: 1px solid #e7e7e7;
+            border-radius: 0;
+            padding: 9px 5px;
+            min-height: 40px;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .login-btn {
+            padding: 13px 20px;
+            background-color: #ea476a;
+            border-radius: 0;
+            font-size: 15px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 14px;
+
+            &:hover {
+                border: 1px solid #ea476a;
+                background-color: #fff;
+                color: #ea476a;
+
+            }
+        }
+
+        a.privacy-policy {
+            color: #3c2c3e;
+            font-size: 14px;
+            text-align: right;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 54px;
+        }
+    }
+
 }
 
 @media (max-width: 991px) {
@@ -34,12 +88,6 @@
     }
 }
 
-.login-wrapper {
-    width: 300px;
-    max-width: 100%;
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
 
 @media (max-width: 575px) {
     .login-wrapper {
@@ -47,56 +95,11 @@
     }
 }
 
-.login-wrapper label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #b0adad;
-}
-
-.login-wrapper .form-control {
-    border: none;
-    border-bottom: 1px solid #e7e7e7;
-    border-radius: 0;
-    padding: 9px 5px;
-    min-height: 40px;
-    font-size: 18px;
-    font-weight: normal;
-}
-
-
-
-.login-wrapper .login-btn {
-    padding: 13px 20px;
-    background-color: #ea476a;
-    border-radius: 0;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 14px;
-}
-
-.login-wrapper .login-btn:hover {
-    border: 1px solid #ea476a;
-    background-color: #fff;
-    color: #ea476a;
-}
-
-.login-wrapper a.privacy-policy {
-    color: #080808;
-    font-size: 14px;
-    text-align: right;
-    text-decoration: underline;
-    display: block;
-    margin-bottom: 54px;
-}
-
 @media (max-width: 575px) {
     .login-wrapper a.privacy-policy {
         margin-bottom: 16px;
     }
 }
-
-
 
 .login-img {
     width: 100%;
