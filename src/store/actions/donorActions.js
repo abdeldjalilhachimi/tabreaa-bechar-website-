@@ -8,12 +8,12 @@ export const addDonor = (donor) => ({
 });
 
 export const startAddDonor = (donorData) => {
-  return (dispatch) => {
-    //const uid = getState().auth.uid;
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
     const { bloodType = "", phoneNumber = "" } = donorData;
     const donor = { bloodType, phoneNumber };
     database
-      .ref(`donors`)
+      .ref(`users/${uid}/donors`)
       .push(donor)
       .then((ref) => {
         dispatch(
@@ -46,10 +46,10 @@ export const setDonor = (donor) => ({
 });
 
 export const startSetDonor = () => {
-  return (dispatch) => {
-    //const uid = getState().auth.uid;
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
     return database
-      .ref(`donors`)
+      .ref(`users/${uid}/donors`)
       .once("value")
       .then((snapshot) => {
         const donor = [];

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Donors from "../components/donors/Donors";
 import SignIn from "../components/auth/SignIn";
 import NotFound from "../components/pages/NotFound";
@@ -15,6 +15,8 @@ import { firebase } from "../service/firebase";
 import "../service/firebase";
 import store from "../store/store";
 import PrivateRoute from "../router/PrivateRoute";
+import { firebase } from "../service/firebase";
+import "../service/firebase";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./main.scss";
@@ -22,7 +24,7 @@ import "./main.scss";
 const App = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter history={history}>
+      <Router history={history}>
         <div className="App">
           <Switch>
             <Route exact={true} path="/" component={SignIn} />
@@ -32,7 +34,7 @@ const App = () => {
             <Route component={NotFound} />
           </Switch>
         </div>
-      </BrowserRouter>
+      </Router>
     </Provider>
   );
 };

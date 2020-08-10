@@ -16,7 +16,7 @@ const AddDonor = () => {
   );
 
   const dispatch = useDispatch();
-  // try to change useReducer
+
   const [userInput, setUserInput] = useReducer(
     (state, newState) => ({ ...state, ...newState }),
     {
